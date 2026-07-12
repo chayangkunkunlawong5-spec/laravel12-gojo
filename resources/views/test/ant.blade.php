@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ant</title>
+</head>
+<body>
+
+    <h1>Ant of Chayangkun 68122420023</h1>
+    <img src="{{ $ant }}" alt="Ant" width="300">
+
+</body>
+</html>
