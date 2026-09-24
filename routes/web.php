@@ -208,3 +208,13 @@ Route::delete('/weight/{id}', function ($id) {
         ->with('success', 'ลบข้อมูลน้ำหนักแล้ว');
 
 })->name('weight.destroy');
+Route::get('/about-me', function () {
+    return view('about-me');
+});
+Route::get('/weights', function () {
+    $weights = Weight::orderBy('date', 'desc')->get();
+    $chartWeights = Weight::orderBy('date', 'asc')->get();
+
+    return view('weight.index', compact('weights', 'chartWeights'));
+})->name('weights.index');
+require __DIR__.'/auth.php';
