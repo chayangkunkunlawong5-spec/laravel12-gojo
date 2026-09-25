@@ -1,5 +1,5 @@
 <?php
-
+use App\Http\Controllers\EmployeeController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CategoryController;
 use Illuminate\Http\Request;
@@ -220,3 +220,5 @@ Route::get('/weights', function () {
     return view('weight.index', compact('weights', 'chartWeights'));
 })->name('weights.index');
 require __DIR__.'/auth.php';
+
+Route::resource('employees', EmployeeController::class);
